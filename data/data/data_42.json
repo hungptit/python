@@ -1,0 +1,59 @@
+{
+  "context": {
+    "date": "2018-10-26 23:19:47",
+    "executable": "./random_string",
+    "num_cpus": 8,
+    "mhz_per_cpu": 2200,
+    "cpu_scaling_enabled": false,
+    "caches": [
+      {
+        "type": "Data",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Instruction",
+        "level": 1,
+        "size": 32768000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 2,
+        "size": 262144000,
+        "num_sharing": 2
+      },
+      {
+        "type": "Unified",
+        "level": 3,
+        "size": 6291456000,
+        "num_sharing": 8
+      }
+    ],
+    "library_build_type": "release"
+  },
+  "benchmarks": [
+    {
+      "name": "std_hash_string",
+      "iterations": 89192426,
+      "real_time": 7.8395715008561790e+00,
+      "cpu_time": 7.8392867125287085e+00,
+      "time_unit": "ns"
+    },
+    {
+      "name": "clhash_string",
+      "iterations": 38934096,
+      "real_time": 1.8295178601076262e+01,
+      "cpu_time": 1.8294478957467003e+01,
+      "time_unit": "ns"
+    },
+    {
+      "name": "boost_hash_string",
+      "iterations": 10923675,
+      "real_time": 6.2225830588362541e+01,
+      "cpu_time": 6.2224754947396377e+01,
+      "time_unit": "ns"
+    }
+  ]
+}
