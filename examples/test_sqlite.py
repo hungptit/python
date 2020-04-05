@@ -2,15 +2,17 @@ import sqlite3
 from os import remove
 
 dbfile = 'example.db'
-
-remove(dbfile)
+# remove(dbfile)
 
 conn = sqlite3.connect(dbfile)
 c = conn.cursor()
 
 # Create table
-c.execute('''CREATE TABLE stocks
+try:
+    c.execute('''CREATE TABLE stocks
              (date text, trans text, symbol text, qty real, price real)''')
+except:
+    pass
 
 # Insert a row of data
 c.execute("INSERT INTO stocks VALUES ('2006-01-05','BUY','RHAT',100,35.14)")
@@ -21,7 +23,9 @@ purchases = [
     ('2006-04-05', 'BUY', 'MSFT', 1000, 72.00),
     ('2006-04-06', 'SELL', 'IBM', 500, 53.00),
 ]
-c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
+
+for i in range(10000):
+    c.executemany('INSERT INTO stocks VALUES (?,?,?,?,?)', purchases)
 
 # Save (commit) the changes
 conn.commit()
