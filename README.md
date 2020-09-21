@@ -16,7 +16,7 @@ Recent versions of cmake, flake8, mypy, and yapf.
 cmake ./
 ```
 
-**Check syntax using yapf**
+**Format and check Python files automatically using `fmt` and `lint` options**
 
 Run `make` command to format and to lint all Python files.
 
