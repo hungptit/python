@@ -24,7 +24,7 @@ Run `make` command to format and to lint all Python files.
 make
 ```
 
-Or we can lint or format separately
+We can lint or format separately using below commands
 
 ``` shell
 make fmt
@@ -44,5 +44,15 @@ Below is the sample output
 make[2]: *** [CMakeFiles/lint.dir/build.make:93: .pylint_stamp] Error 1
 make[1]: *** [CMakeFiles/Makefile2:123: CMakeFiles/lint.dir/all] Error 2
 make: *** [Makefile:103: all] Error 2
+```
+
+# FAQs #
+
+**How can I use this setup for my Python project?**
+
+You only need to copy the CMakeLists.txt file to the root of your project then update PY_SRCS variable, which is set to *examples/*.py* in the line 4 of the CMakeLists.txxt file.
+
+``` shell
+file(GLOB PY_SRCS examples/*.py)
 ```
 
