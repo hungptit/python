@@ -1,6 +1,2 @@
 import numpy
 import csv
-
-
-
-

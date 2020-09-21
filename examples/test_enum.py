@@ -10,4 +10,3 @@ class Color(Enum):
 red = Color(1)
 green = Color(2)
 blue = Color(3)
-
