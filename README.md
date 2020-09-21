@@ -1,6 +1,6 @@
 # Introduction
 
-This a collection of experimental Pythong scripts.
+This a collection of experimental Python scripts.
 
 # Format and lint Python scripts automatically #
 
